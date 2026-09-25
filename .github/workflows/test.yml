@@ -25,3 +25,11 @@ jobs:
 
       - name: Run tests
         run: pytest
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build
+        run: echo "Building the application..."
